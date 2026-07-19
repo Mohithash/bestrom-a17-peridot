@@ -1,0 +1,22 @@
+package { default_applicable_licenses: ["Android-Apache-2.0"] }
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.allocator@4.0",
+    vendor: true,
+    srcs: ["vendor_qti_hardware_display_allocator_4_0.c"],
+    shared_libs: ["libc", "libdl", "liblog", "libm"],
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.mapper@4.0",
+    vendor: true,
+    srcs: ["vendor_qti_hardware_display_mapper_4_0.c"],
+    shared_libs: ["libc", "libdl", "liblog", "libm"],
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.mapperextensions@1.1",
+    vendor: true,
+    srcs: ["vendor_qti_hardware_display_mapperextensions_1_1.c"],
+    shared_libs: ["libc", "libdl", "liblog", "libm"],
+}

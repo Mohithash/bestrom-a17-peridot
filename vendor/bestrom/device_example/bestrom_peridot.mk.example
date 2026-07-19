@@ -1,0 +1,23 @@
+#
+# Example product makefile for device/xiaomi/peridot/
+# Copy ideas into bestrom_peridot.mk (do not use this path in tree as-is).
+#
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# BestROM common (like VoltageOS common_full_phone.mk)
+$(call inherit-product, vendor/bestrom/config/common_full_phone.mk)
+
+# Device
+$(call inherit-product, device/xiaomi/peridot/device.mk)
+
+PRODUCT_NAME := bestrom_peridot
+PRODUCT_DEVICE := peridot
+PRODUCT_BRAND := POCO
+PRODUCT_MODEL := 24069PC21G
+PRODUCT_MANUFACTURER := Xiaomi
+
+# BestROM flags
+BESTROM_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1440

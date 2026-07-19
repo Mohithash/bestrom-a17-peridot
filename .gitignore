@@ -1,0 +1,28 @@
+# Secrets / local
+.env
+*.pem
+*.pk8
+*password*
+**/secrets*
+
+# Build / extracts
+out/
+extract*/
+ota_extract*/
+*.img
+payload_*.bin
+device-vendor-bestrom.tgz
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Large archives (use GitHub Releases)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+!patches/**/*.patch

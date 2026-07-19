@@ -1,0 +1,88 @@
+# Camera
+ro.hardware.camera=xiaomi
+ro.miui.notch=1
+ro.product.mod_device=peridot_global
+ro.camerax.extensions.enabled=true
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera,com.google.camera,com.snapchat.android
+
+# Device
+ro.product.mod_device=peridot_global
+
+# QTI
+ro.vendor.qti.va_aosp.support=1
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+ro.media.xml_variant.profiles=_cliffs_v0
+
+# IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Logging
+persist.vendor.camera.logInfoMask=false
+persist.log.tag.ACDB-LOADER=S
+persist.log.tag.CVP=S
+persist.log.tag.ResourcesCompat=S
+persist.log.tag.SYNX-UMD=S
+persist.log.tag.libsensor-parseRGB=S
+persist.log.tag.PowerUI=S
+persist.log.tag.BackgroundInstallControlService=S
+persist.log.tag.HWUI=S
+persist.log.tag.NetworkStack=S
+persist.log.tag.ConnectivityService=S
+persist.log.tag.Bluetooth=S
+persist.log.tag.btif=S
+persist.log.tag.bluetooth_sco=S
+persist.log.tag.SensorService=S
+persist.log.tag.SensorManager=S
+persist.log.tag.PowerManagerService=S
+persist.log.tag.BatteryService=S
+persist.log.tag.SystemServer=S
+persist.log.tag.AppOps=S
+
+# LMKD
+ro.config.low_ram=false
+ro.lmk.swap_compression_ratio=2
+
+# minksocket
+persist.log.tag.minksocket=S
+
+# Radio Options
+persist.radio.volte.dan_support=true
+persist.radio.rat_on=combine
+persist.radio.data_ltd_sys_ind=1
+persist.radio.data_con_rprt=1
+persist.radio.calls.on.ims=1
+persist.radio.VT_ENABLE=1
+
+# RIL Powersaving
+persist.radio.add_power_save=1 
+pm.sleep_mode=1 
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=1 
+ro.ril.fast.dormancy.timeout=5
+ro.mot.eri.losalert.delay=1000
+
+# Other Options
+persist.sys.cust.lte_config=true
+persist.rcs.supported=1
+
+# Feature flags
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
+# Radio VoNR Calling
+persist.radio.is_vonr_enabled_0=true
+persist.radio.is_vonr_enabled_1=true
+persist.vendor.vonr_setting_support=1
+
+# Disable default frame rate limit for games
+debug.graphics.game_default_frame_rate.disabled=1
+
+# QTI Mem Optimisation
+persist.vendor.sys.memplus.enable=false
+ro.vendor.qti.sys.fw.bg_apps_limit=30
+ro.vendor.qti.sys.fw.bservice_limit=60

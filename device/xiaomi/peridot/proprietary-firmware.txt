@@ -1,0 +1,26 @@
+# All unpinned firmware below are extracted from peridot OS3.0.6.0.WNPMIXM - peridot_global-ota_full-OS3.0.6.0.WNPMIXM
+
+abl.img;AB|0b17889de45cffedebae94c3b18fc3b4252b7b7f
+aop.img;AB|a80fcd74ff71ebb4a90ce6fc65e5d72340bf281b
+aop_config.img;AB|ecb201f4bb493bd78973ac0fb7964f8781ef5811
+bluetooth.img;AB|908edd8d1188106843276ebebdb0c4639071f716
+countrycode.img;AB|2b937879b56295827c1f2e3fe4b63f682856e331
+cpucp.img;AB|ddc33e9bdbbb24099fde166f1e550d44f48643d4
+cpucp_dtb.img;AB|4fdd1f8c8870efbea727874ab440ed2ab75229ce
+devcfg.img;AB|691b74172be811d78c7b4670d9d2093fd2b18fe2
+dsp.img;AB|e8452300c7da2ef8e22c277840e8a9118ea9d42a
+featenabler.img;AB|d82b955114d89969484948b4dd81e9cdb98a55ce
+hyp.img;AB|1e0daf9a7c3fbe7f5d05dab284911efd4bd74896
+imagefv.img;AB|d35661c7dcee045f667945e24f2d904c69c14d18
+keymaster.img;AB|10dac13270990abaa2574d7673ab1810ea7fff01
+modem.img;AB|6b3f485fd601a11c698a63a26b5e796500ceb91a
+modemfirmware.img;AB|45cedaaf4a9cec9c8ee109b48d7e4e6f173dbdee
+multiimgqti.img;AB|85c6e03d0dd54630f5017c9c83517fbe19ad6af1
+qupfw.img;AB|56d14978ab89bdd8d691deb8ae3eb8086e79c4cd
+shrm.img;AB|60a40a6ca2fb16ae7aea7f8cbca1bd5a857a3577
+tz.img;AB|315d08d39d9163cf400fd9364fc3d2363f680cc7
+uefi.img;AB|2db0876c07e64f503fd23365f391cee3c427ce37
+uefisecapp.img;AB|ec4e48cd05e00c66dbf891449e422d90601e9a51
+xbl.img;AB|305c63631ce71534b7e08e5807d66addb1f0e26e
+xbl_config.img;AB|ac64888d1b68fc1ca1e0ed526257a7b07c4380ce
+xbl_ramdump.img;AB|7e39cde99309b676173797e4215495b3c0812526

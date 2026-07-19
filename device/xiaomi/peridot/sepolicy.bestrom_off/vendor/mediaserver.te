@@ -1,0 +1,5 @@
+allow mediaserver sound_device:chr_file rw_file_perms;
+allow mediaserver vendor_sys_video_prop:file read;
+get_prop(mediaserver, vendor_video_prop)
+# BestROM sepolicy: disabled missing vendor_hal attr
+# hal_client_domain(mediaserver, vendor_hal_qconfig)

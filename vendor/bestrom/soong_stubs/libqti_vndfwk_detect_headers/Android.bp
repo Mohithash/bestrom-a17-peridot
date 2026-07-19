@@ -1,0 +1,12 @@
+package { default_applicable_licenses: ["Android-Apache-2.0"] }
+cc_library_headers {
+    name: "libqti_vndfwk_detect_headers",
+    vendor: true,
+    export_include_dirs: ["include"],
+}
+// also export under common alias names
+cc_library_headers {
+    name: "vndfwk_detect_headers",
+    vendor: true,
+    export_include_dirs: ["include"],
+}

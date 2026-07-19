@@ -1,0 +1,25 @@
+allow hal_audio bluetooth:binder transfer;
+allow hal_audio_default vendor_persist_audio_file:dir rw_dir_perms;
+allow hal_audio_default vendor_persist_audio_file:file { create rw_file_perms };
+allow hal_audio_default mnt_vendor_file:dir r_dir_perms;
+allow hal_audio_default vendor_audio_prop:property_service set;
+allow hal_audio_default audio_socket:sock_file rw_file_perms;
+allow hal_audio_default sound_device:chr_file rw_file_perms;
+allow hal_audio_default sysfs:file rw_file_perms;
+allow hal_audio_default proc_sysrq:file { open write };
+allow hal_audio_default vendor_sysfs_battery_supply:dir search;
+allow hal_audio_default vendor_sysfs_battery_supply:file { getattr open read };
+unix_socket_connect(hal_audio_default, vendor_ssgtzd, init)
+unix_socket_connect(hal_audio_default, vendor_ssgtzd, hal_sensors_default)
+unix_socket_connect(hal_audio_default, property, vendor_vui_dmgr)
+unix_socket_connect(hal_audio_default, property, vendor_ssgtzd)
+unix_socket_connect(hal_audio_default, property, init)
+unix_socket_connect(hal_audio_default, property, hal_sensors_default)
+get_prop(hal_audio, vendor_audio_prop)
+
+# Extcon access for audio codec and HDMI state
+allow hal_audio_default sysfs_extcon:dir search;
+allow hal_audio_default sysfs_extcon:file { getattr open read write };
+
+# Debugfs access
+allow hal_audio_default debugfs:dir read;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  BestROM monochrome brand tokens — black + greys only (Nothing-like).
+  No violet/cyan brand hues.
+-->
+<resources>
+    <color name="bestrom_black">#FF000000</color>
+    <color name="bestrom_ink">#FF0A0A0A</color>
+    <color name="bestrom_dot_dim">#FF6B7280</color>
+    <color name="bestrom_dot">#FF9CA3AF</color>
+    <color name="bestrom_dot_bright">#FFD1D5DB</color>
+    <color name="bestrom_mist">#FFD1D5DB</color>
+    <color name="bestrom_muted">#FF9CA3AF</color>
+    <color name="bestrom_line">#FF1A1A1A</color>
+    <!-- Legacy names map to greys so old refs stay monochrome -->
+    <color name="bestrom_void">#FF000000</color>
+    <color name="bestrom_deep">#FF0A0A0A</color>
+    <color name="bestrom_violet">#FF9CA3AF</color>
+    <color name="bestrom_violet_glow">#FFD1D5DB</color>
+    <color name="bestrom_cyan">#FFD1D5DB</color>
+</resources>

@@ -1,0 +1,3 @@
+#!/sbin/sh
+# Shared functions for backuptool.sh (stub)
+export V=1

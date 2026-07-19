@@ -1,0 +1,597 @@
+{
+  "policy": "incremental — no clean",
+  "resumes": [
+    {
+      "at": "2026-07-18T19:09:24.859Z",
+      "reason": "QTI HIDL impl disable",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:15:17.448Z",
+      "reason": "libdrmutils strip stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:24:10.779Z",
+      "reason": "fingerprint Session.cpp includes",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:26:06.570Z",
+      "reason": "libcne shims",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:32:35.013Z",
+      "reason": "gnss battery listener headers",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:34:28.914Z",
+      "reason": "gnss headers vendor true",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:41:41.643Z",
+      "reason": "vndfwk-detect.h stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:48:43.878Z",
+      "reason": "disable remaining WFD halimpl",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:53:48.832Z",
+      "reason": "chi.override strip camera impls",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T19:55:39.012Z",
+      "reason": "disable BT audio QTI impl",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:00:44.117Z",
+      "reason": "bulk shims",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:06:51.857Z",
+      "reason": "audio.primary pineapple deps",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:12:08.487Z",
+      "reason": "re-enable impls strip ifaces",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:14:29.633Z",
+      "reason": "WFD-only disable",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:19:14.724Z",
+      "reason": "VINTF manifest_non_qmaa stubs",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:21:17.681Z",
+      "reason": "generated_kernel_headers stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:27:34.661Z",
+      "reason": "udfps mi_disp stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:36:06.922Z",
+      "reason": "lib_driver_cmd_qcwcn stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:39:07.836Z",
+      "reason": "qcwcn dedupe",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:43:52.316Z",
+      "reason": "qcwcn vendor true",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:46:04.562Z",
+      "reason": "qcwcn bp clean",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:48:33.789Z",
+      "reason": "qcwcn final clean",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:51:06.553Z",
+      "reason": "sole qcwcn stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T20:57:30.775Z",
+      "reason": "qcwcn full stub symbols",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:00:39.649Z",
+      "reason": "qcwcn nop full symbols",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:04:04.041Z",
+      "reason": "camera init strip",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:06:53.497Z",
+      "reason": "qti_kernel_headers stub",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:10:09.468Z",
+      "reason": "qti headers clean",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:13:36.573Z",
+      "reason": "qti headers sole",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:17:20.249Z",
+      "reason": "check_elf prebuilts",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:21:18.847Z",
+      "reason": "check_elf dedupe",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:27:29.818Z",
+      "reason": "check_elf all prebuilts",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:33:25.354Z",
+      "reason": "abl.img packaging",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:38:48.973Z",
+      "reason": "real radio images",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:44:39.588Z",
+      "reason": "radio_install.mk",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:51:17.099Z",
+      "reason": "radio macro fix",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T21:58:19.800Z",
+      "reason": "sole add-radio-file",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T22:06:06.937Z",
+      "reason": "skip VINTF OTA",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T22:11:46.035Z",
+      "reason": "skip_compatibility_check",
+      "mode": "incremental"
+    },
+    {
+      "at": "2026-07-18T22:18:19.289Z",
+      "reason": "VINTF rewrite skip",
+      "mode": "incremental"
+    }
+  ],
+  "autofixes": [
+    {
+      "at": "2026-07-18T13:57:00Z",
+      "error": "wpa_supplicant_conf.mk already soong",
+      "fix": "FORCE_USE_ANDROIDMK_FOR_WPA_CONF := true in device.mk"
+    },
+    {
+      "at": "2026-07-18T13:54:00Z",
+      "error": "CTS trendy_team / neverallow / all_teams panic",
+      "fix": "Moved CTS/tools outside tree (kept cts/libs/json later)"
+    },
+    {
+      "at": "2026-07-18T14:04:00Z",
+      "error": "missing out/.../kernel rule",
+      "fix": "Theettam 2.1 Image prebuilt → product kernel"
+    },
+    {
+      "at": "2026-07-18T14:39:00Z",
+      "error": "missing dtb.img",
+      "fix": "DTB/DTBO from Lineage vendor_boot (VOS upload pending)"
+    },
+    {
+      "at": "2026-07-18T15:03:00Z",
+      "error": "telephony-ext.jar undefined",
+      "fix": "Removed telephony-ext from PRODUCT_BOOT_JARS/PACKAGES"
+    },
+    {
+      "at": "2026-07-18T15:08:00Z",
+      "error": "media_codecs_c2_audio.xml missing",
+      "fix": "Stub CAF codec2 XML + policy files"
+    },
+    {
+      "at": "2026-07-18T15:31:00Z",
+      "error": "protologtool missing jsonlib",
+      "fix": "Restored cts/libs/json (com.android.json.stream)"
+    },
+    {
+      "at": "2026-07-18T15:59:00Z",
+      "error": "duplicate ro.product.system.manufacturer",
+      "fix": "Keep Xiaomi manufacturer; drop BestROM override"
+    },
+    {
+      "at": "2026-07-18T16:23:00Z",
+      "error": "LocIpcRecver incomplete type (unique_ptr)",
+      "fix": "3-arg getLocIpcQrtrRecver out-of-line in LocIpc.cpp"
+    },
+    {
+      "at": "2026-07-18T16:37:00Z",
+      "error": "libcdsprpc missing libvmmem",
+      "fix": "Stub libvmmem; strip from libcdsprpc shared_libs"
+    },
+    {
+      "at": "2026-07-18T16:47:00Z",
+      "error": "libpdmapper missing libjson",
+      "fix": "Stub libjson; strip from libpdmapper shared_libs"
+    },
+    {
+      "at": "2026-07-18T16:50:00Z",
+      "error": "libvmmem already defined (dup stubs)",
+      "fix": "Single soong_stubs/libvmmem; disabled QTI source bp"
+    },
+    {
+      "at": "2026-07-18T17:06:08.654Z",
+      "error": "libcamxcommonutils missing libprocessgroup_shim",
+      "fix": "Strip from prebuilt shared_libs + vendor soong stub"
+    },
+    {
+      "at": "2026-07-18T17:18:39.656Z",
+      "error": "sepolicy vendor_hal_qspmhal_client not declared",
+      "fix": "Disable typeattribute in permissioncontroller_app.te (system_ext private)"
+    },
+    {
+      "at": "2026-07-18T17:20:20.276Z",
+      "error": "hal_client_domain expands to undeclared vendor_hal_qspmhal_client",
+      "fix": "Comment out private/permissioncontroller_app.te macro"
+    },
+    {
+      "at": "2026-07-18T17:31:01.060Z",
+      "error": "vendor_hal_diaghal_server not declared (diag-router.te)",
+      "fix": "Neutralize missing vendor_hal typeattributes in device sepolicy"
+    },
+    {
+      "at": "2026-07-18T17:34:20.301Z",
+      "error": "vendor_persist_type not declared (file.te)",
+      "fix": "Auto-declare missing sepolicy attributes (bestrom_missing_attrs.te)"
+    },
+    {
+      "at": "2026-07-18T17:36:59.952Z",
+      "error": "libcommonchiutils missing QTI display HIDL",
+      "fix": "Strip vendor.qti.hardware.display.* from prebuilt shared_libs"
+    },
+    {
+      "at": "2026-07-18T17:40:36.854Z",
+      "error": "Duplicate declaration vendor_service in bestrom_missing_attrs.te",
+      "fix": "Remove attrs file; strip vendor_persist_type from file.te"
+    },
+    {
+      "at": "2026-07-18T17:45:21.882Z",
+      "error": "sepolicy syntax error rw_dir_file (hal_power_default.te)",
+      "fix": "Expand to allow dir/file rw_perms"
+    },
+    {
+      "at": "2026-07-18T17:47:34.992Z",
+      "error": "incomplete device sepolicy cascade (unknown types/macros)",
+      "fix": "Disable device/xiaomi/peridot/sepolicy for boot-first"
+    },
+    {
+      "at": "2026-07-18T17:50:01.829Z",
+      "error": "BoardConfig still included device sepolicy",
+      "fix": "Comment SEPOLICY_DIRS/includes in BoardConfig.mk"
+    },
+    {
+      "at": "2026-07-18T17:59:28.993Z",
+      "error": "libsnsapi missing libprotobuf-cpp-lite-21.7",
+      "fix": "Strip versioned protobuf deps + stub alias"
+    },
+    {
+      "at": "2026-07-18T18:07:33.042Z",
+      "error": "libdisplayconfig.qti missing vendor.display.config@2.0",
+      "fix": "Bulk strip missing QTI HIDL/shared_libs from prebuilts"
+    },
+    {
+      "at": "2026-07-18T18:09:12.921Z",
+      "error": "Android.bp syntax broken after bulk strip (line 15408)",
+      "fix": "Repair braces/orphaned keys"
+    },
+    {
+      "at": "2026-07-18T18:11:10.745Z",
+      "error": "Android.bp name fields clobbered by HIDL strip",
+      "fix": "Restore name from proprietary .so paths"
+    },
+    {
+      "at": "2026-07-18T18:13:07.189Z",
+      "error": "Android.bp corrupted by strip",
+      "fix": "git checkout Android.bp + safe shared_libs-only strip"
+    },
+    {
+      "at": "2026-07-18T18:15:05.508Z",
+      "error": "soong_namespace missing voltage/pixel/XiaomiParts",
+      "fix": "Remove missing namespace imports; keep safe shared_libs strips"
+    },
+    {
+      "at": "2026-07-18T18:17:35.752Z",
+      "error": "libwfdservice AIDL V4/V5 conflict",
+      "fix": "enabled: false on libwfdservice (+ related wfd modules)"
+    },
+    {
+      "at": "2026-07-18T18:24:06.006Z",
+      "error": "libwfdmmsrc_proprietary missing libwfdaac_vendor",
+      "fix": "Disable all WFD prebuilts + stub libwfdaac_vendor"
+    },
+    {
+      "at": "2026-07-18T18:29:32.045Z",
+      "error": "libagm missing libaudioroute-v34",
+      "fix": "Strip + stub libaudioroute-v34"
+    },
+    {
+      "at": "2026-07-18T18:31:11.642Z",
+      "error": "libaudioroute_ext stub vs odm prebuilt partition clash",
+      "fix": "Remove ext stub; keep v34 stub + strips"
+    },
+    {
+      "at": "2026-07-18T18:39:45.451Z",
+      "error": "libar-pal missing libagmclient, libvui_intf",
+      "fix": "Safe strip + stub"
+    },
+    {
+      "at": "2026-07-18T18:46:28.812Z",
+      "error": "offlinecamera-service-impl missing offlinecamera-V1-ndk",
+      "fix": "Disable offlinecamera modules"
+    },
+    {
+      "at": "2026-07-18T18:51:21.166Z",
+      "error": "libaudiocloudctrl missing libtinyxml2-v34",
+      "fix": "Bulk strip/stub versioned -v34 libs"
+    },
+    {
+      "at": "2026-07-18T18:55:03.243Z",
+      "error": "camera aon-service-impl missing aon-V1-ndk",
+      "fix": "Disable QTI camera AIDL service-impl modules"
+    },
+    {
+      "at": "2026-07-18T19:01:40.111Z",
+      "error": "libbluetooth_audio_session_aidl_qti missing bluetooth.audio-V1-ndk",
+      "fix": "Bulk strip vendor.qti *-V*-ndk + disable service-impl modules"
+    },
+    {
+      "at": "2026-07-18T19:09:24.811Z",
+      "error": "vendor.qti.hardware.pal@1.0-impl missing pal@1.0",
+      "fix": "Disable QTI HIDL @-impl modules + strip iface lines"
+    },
+    {
+      "at": "2026-07-18T19:15:17.395Z",
+      "error": "libsdedrm missing libdrmutils",
+      "fix": "Safe strip + stub libdrmutils"
+    },
+    {
+      "at": "2026-07-18T19:24:10.733Z",
+      "error": "fingerprint Session.cpp missing std::function/bind includes",
+      "fix": "Add functional/thread/chrono includes"
+    },
+    {
+      "at": "2026-07-18T19:26:06.513Z",
+      "error": "libcne missing libbinder_shim, libqti_vndfwk_detect_vendor",
+      "fix": "Safe strip + stub"
+    },
+    {
+      "at": "2026-07-18T19:32:34.969Z",
+      "error": "gnss-aidl-impl-qti missing liblocbatterylistener_headers",
+      "fix": "Stub cc_library_headers + strip"
+    },
+    {
+      "at": "2026-07-18T19:34:28.862Z",
+      "error": "liblocbatterylistener_headers not vendor-visible / bp broken",
+      "fix": "Restore headers module with vendor:true"
+    },
+    {
+      "at": "2026-07-18T19:41:41.575Z",
+      "error": "gps service.cpp missing vndfwk-detect.h",
+      "fix": "Stub libqti_vndfwk_detect_headers + wire GPS aidl-impl"
+    },
+    {
+      "at": "2026-07-18T19:48:43.824Z",
+      "error": "wifidisplaysessionl@1.0-halimpl missing disabled WFD libs",
+      "fix": "Disable remaining WFD/halimpl modules"
+    },
+    {
+      "at": "2026-07-18T19:53:48.773Z",
+      "error": "com.qti.chi.override missing disabled camera service-impls",
+      "fix": "Strip those shared_libs from chi.override"
+    },
+    {
+      "at": "2026-07-18T19:55:38.930Z",
+      "error": "bluetooth.audio-impl-qti missing session_aidl_qti",
+      "fix": "Disable BT audio QTI modules + strip deps"
+    },
+    {
+      "at": "2026-07-18T20:00:44.069Z",
+      "error": "vendor.libdpmframework missing libhidlbase_shim",
+      "fix": "Bulk strip/stub *_shim libs"
+    },
+    {
+      "at": "2026-07-18T20:06:51.802Z",
+      "error": "audio.primary.pineapple missing pal/AGMIPC impls",
+      "fix": "Re-enable impls + strip HIDL iface deps"
+    },
+    {
+      "at": "2026-07-18T20:12:08.442Z",
+      "error": "qseecom service needs re-enabled impl; cascade of disabled @-impl",
+      "fix": "Re-enable BestROM-disabled modules; strip HIDL iface shared_libs"
+    },
+    {
+      "at": "2026-07-18T20:14:29.584Z",
+      "error": "libwfdservice AIDL V4/V5 after re-enable",
+      "fix": "Disable WFD-only; keep QTI @-impl enabled"
+    },
+    {
+      "at": "2026-07-18T20:19:14.675Z",
+      "error": "vendor_manifest missing manifest_non_qmaa.xml",
+      "fix": "Stub empty VINTF fragments under qcom-caf sm8650 audio"
+    },
+    {
+      "at": "2026-07-18T20:21:17.631Z",
+      "error": "sensor-notifier missing generated_kernel_headers",
+      "fix": "Stub headers + disable sensor-notifier (prebuilt kernel)"
+    },
+    {
+      "at": "2026-07-18T20:27:34.615Z",
+      "error": "UdfpsHandler missing display/drm/mi_disp.h",
+      "fix": "Stub mi_disp.h + disable libudfpshandler"
+    },
+    {
+      "at": "2026-07-18T20:36:06.872Z",
+      "error": "wpa_supplicant missing lib_driver_cmd_qcwcn",
+      "fix": "Stub static lib_driver_cmd_qcwcn"
+    },
+    {
+      "at": "2026-07-18T20:39:07.787Z",
+      "error": "lib_driver_cmd_qcwcn duplicate (stub vs legacy mk)",
+      "fix": "Remove stub; disable legacy Android.mk; use caf soong"
+    },
+    {
+      "at": "2026-07-18T20:43:52.268Z",
+      "error": "wpa_supplicant still missing lib_driver_cmd_qcwcn (caf not vendor)",
+      "fix": "Set vendor:true on caf soong module"
+    },
+    {
+      "at": "2026-07-18T20:46:04.514Z",
+      "error": "duplicate vendor property on lib_driver_cmd_qcwcn",
+      "fix": "Rewrite clean Android.bp with vendor_available"
+    },
+    {
+      "at": "2026-07-18T20:48:33.739Z",
+      "error": "lib_driver_cmd_qcwcn vendor_available invalid; still missing",
+      "fix": "Clean vendor:true bp; drop defaults; keep legacy mk off"
+    },
+    {
+      "at": "2026-07-18T20:51:06.494Z",
+      "error": "caf lib_driver_cmd_qcwcn not linking to wpa",
+      "fix": "Sole soong stub; disable caf bp + legacy mk"
+    },
+    {
+      "at": "2026-07-18T20:57:30.723Z",
+      "error": "hostapd undefined wpa_driver_* after empty qcwcn stub",
+      "fix": "Full stub symbols (or real caf srcs) for lib_driver_cmd_qcwcn"
+    },
+    {
+      "at": "2026-07-18T21:00:39.597Z",
+      "error": "real caf qcwcn needs netlink headers",
+      "fix": "Pure nop stub with hostapd wpa_driver_* symbols"
+    },
+    {
+      "at": "2026-07-18T21:04:03.991Z",
+      "error": "host_init_verifier camera aon/postproc HIDL missing",
+      "fix": "Strip aon/postproc Interface lines from camera provider rc"
+    },
+    {
+      "at": "2026-07-18T21:06:53.446Z",
+      "error": "librmnetctl missing qti_kernel_headers",
+      "fix": "Stub qti_kernel_headers for prebuilt kernel"
+    },
+    {
+      "at": "2026-07-18T21:10:09.414Z",
+      "error": "qti_kernel_headers vendor_available+vendor invalid",
+      "fix": "Clean header stub + device_kernel_headers"
+    },
+    {
+      "at": "2026-07-18T21:13:36.509Z",
+      "error": "device_kernel_headers duplicate with build/soong",
+      "fix": "Remove stub; keep sole qti_kernel_headers"
+    },
+    {
+      "at": "2026-07-18T21:17:20.197Z",
+      "error": "check_elf camera prebuilt missing display HIDL DT_NEEDED",
+      "fix": "check_elf_files:false + stub missing display HIDL if needed"
+    },
+    {
+      "at": "2026-07-18T21:21:18.800Z",
+      "error": "check_elf_files already defined double inject",
+      "fix": "Dedupe check_elf_files in peridot Android.bp"
+    },
+    {
+      "at": "2026-07-18T21:27:29.766Z",
+      "error": "qms check_elf DT_NEEDED binder_shim/bttpi/protobuf",
+      "fix": "check_elf_files:false on all prebuilts + stubs"
+    },
+    {
+      "at": "2026-07-18T21:33:25.288Z",
+      "error": "packaging Failed to find abl.img",
+      "fix": "Placeholder abl.img + stage RADIO for AB OTA"
+    },
+    {
+      "at": "2026-07-18T21:38:48.919Z",
+      "error": "abl.img missing but real radio imgs unused; override conflict",
+      "fix": "Wire vendor/xiaomi/peridot/radio/*.img into PRODUCT_OUT/RADIO"
+    },
+    {
+      "at": "2026-07-18T21:44:39.538Z",
+      "error": "radio.mk PRODUCT_OUT empty; need kati-time radio install",
+      "fix": "BoardConfigVendor radio_install.mk + real vendor imgs"
+    },
+    {
+      "at": "2026-07-18T21:51:17.036Z",
+      "error": "add-radio-file-sha1-checked undefined on A17",
+      "fix": "Use add-radio-file + radio_install PRODUCT_OUT copies"
+    },
+    {
+      "at": "2026-07-18T21:58:19.739Z",
+      "error": "duplicate abl.img rules radio_install vs add-radio-file",
+      "fix": "Remove radio_install.mk; sole add-radio-file"
+    },
+    {
+      "at": "2026-07-18T22:06:06.880Z",
+      "error": "OTA VINTF compatibility check failed after target_files",
+      "fix": "BESTROM_SKIP_VINTF soft-fail for packaging"
+    },
+    {
+      "at": "2026-07-18T22:11:45.982Z",
+      "error": "VINTF py IndentationError; need --skip_compatibility_check",
+      "fix": "Fix py + Makefile skip_compatibility_check"
+    },
+    {
+      "at": "2026-07-18T22:18:19.221Z",
+      "error": "corrupted check_target_files_vintf.py IndentationError",
+      "fix": "Rewrite CheckVintfIfTrebleEnabled as skip"
+    },
+    {
+      "at": "2026-07-18T22:25:10.262Z",
+      "error": "OTA VINTF blocked zip",
+      "fix": "Skip VINTF check; bacon completed"
+    }
+  ]
+}

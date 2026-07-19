@@ -1,0 +1,384 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+import /vendor/etc/init/hw/init.batterysecret.rc
+
+on early-boot
+    # Modem
+    mkdir /data/vendor/modem 0777 root root
+    mkdir /data/vendor/modem/diag_logs 0777 root root
+
+    # Enable WLAN cold boot calibration
+    write /sys/kernel/cnss/fs_ready 1
+
+on early-init
+    export ADSP_LIBRARY_PATH /odm/lib/rfsa/adsp;/vendor/lib/rfsa/adsp/;/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp
+    # Set tcp_mtu_probing to 1
+    write /proc/sys/net/ipv4/tcp_mtu_probing 1
+
+    chown system graphics /sys/class/drm/card0/device/power/control
+
+on boot
+    restorecon /sys/devices/soc0/subset_parts
+
+    # Disable FB scaling // xiaomi disables it in qti_display_boot scripts
+    setprop vendor.display.enable_fb_scaling 1
+
+    # Create persist for camera calibration data
+    mkdir /mnt/vendor/persist/camera 0755 system cameraserver
+
+    # Display feature sysfs node
+    chown system system /sys/class/mi_display/disp-DSI-0/disp_param
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
+    chown system system /sys/class/mi_display/disp-DSI-0/mipi_rw
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/mipi_rw
+    chown system system /sys/class/mi_display/disp-DSI-0/panel_info
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/panel_info
+    chown system system /sys/class/mi_display/disp-DSI-0/panel_build_id
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/panel_build_id
+    chown system system /sys/class/mi_display/disp-DSI-0/wp_info
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/wp_info
+    chown system system /sys/class/mi_display/disp-DSI-0/dynamic_fps
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/dynamic_fps
+    chown system system /sys/class/mi_display/disp-DSI-0/doze_brightness
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/doze_brightness
+    chown system system /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chown system system /sys/class/mi_display/disp-DSI-0/max_brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/max_brightness_clone
+
+    # Xiaomi touch
+    chown system system /dev/xiaomi-touch
+    chmod 0660 /dev/xiaomi-touch
+    chown system system /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
+    chmod 0660 /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
+    chown system system /sys/class/touch/touch_dev/gesture_single_tap_enabled
+    chmod 0660 /sys/class/touch/touch_dev/gesture_single_tap_enabled
+    chown system system /sys/class/touch/touch_dev/gesture_double_tap_enabled
+    chmod 0660 /sys/class/touch/touch_dev/gesture_double_tap_enabled
+    chown system system /sys/class/touch/touch_dev/gesture_double_tap_state
+    chmod 0664 /sys/class/touch/touch_dev/gesture_double_tap_state
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+    chmod 0660 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+
+    # Fingerprint
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+    chmod 0666 /dev/xiaomi-fp
+    chown system system /dev/xiaomi-fp
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq_enable
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/wakeup_enable
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/hw_reset
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/device_prepare
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/fingerdown_wait
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/request_vreg
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/simulate_irq
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/finger_irq
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/power_cfg
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/power_ctrl
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/screen
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/irq
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/wakeup_enable
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/hw_reset
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/device_prepare
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/request_vreg
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/simulate_irq
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/finger_irq
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/power_cfg
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/power_ctrl
+    chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/screen
+    chmod 0666 /dev/input/event2
+
+    # CPU-Sets
+    chown system system /dev/cpuset/cgroup.procs
+    chown system system /dev/cpuset/foreground/cgroup.procs
+    chown system system /dev/cpuset/background/cgroup.procs
+    chown system system /dev/cpuset/system-background/cgroup.procs
+    chown system system /dev/cpuset/top-app/cgroup.procs
+
+    chmod 0666 /dev/cpuset/foreground/cgroup.procs
+    chmod 0666 /dev/cpuset/background/cgroup.procs
+    chmod 0666 /dev/cpuset/system-background/cgroup.procs
+    chmod 0666 /dev/cpuset/top-app/cgroup.procs
+    chmod 0666 /dev/cpuset/cgroup.procs
+
+    chown system system /dev/stune/background/cgroup.procs
+    chown system system /dev/stune/top-app/cgroup.procs
+    chmod 0666 /dev/stune/background/cgroup.procs
+    chmod 0666 /dev/stune/top-app/cgroup.procs
+
+    # Default country code
+    setprop ro.boot.wificountrycode 00
+
+    write /sys/block/sda/queue/wbt_lat_usec 75000
+
+on charger
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled n
+    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
+
+on init
+    chmod 0666 /dev/uhid
+    mkdir /dev/cpuctl/misc
+    chown system system /dev/cpuctl/misc
+    chown system system /dev/cpuctl/misc/tasks
+    chown system system /dev/cpuctl/misc/cgroup.procs
+    chmod 0664 /dev/cpuctl/misc/cgroup.procs
+    chmod 0664 /dev/cpuctl/misc/tasks
+    mkdir /dev/cpuset/small-window
+    mkdir /dev/cpuctl/small-window
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
+
+    # Report max frequency to unity tasks.
+    write /proc/sys/walt/sched_lib_name "UnityMain,libunity.so,libil2cpp.so,com.miHoYo.,com.pubg.imobile,com.pubg.,com.activision.,com.mobilechess.gp,com.mobile.legends"
+    write /proc/sys/walt/sched_lib_mask_force 255
+
+on fs
+    mkdir /dev/logfs 0771 system system
+    mount vfat /dev/block/bootdevice/by-name/logfs /dev/logfs noatime umask=006,uid=1000,gid=1000
+    mount ext4 /dev/block/bootdevice/by-name/rescue /mnt/rescue noatime
+    restorecon_recursive /mnt/rescue
+    # add Audio_DataWhale
+    chmod 0666 /dev/xlog
+
+on post-fs-data
+    # Camera
+    mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
+    mkdir /data/vendor/camera/aftersalelog 0777 cameraserver audio
+
+    # Video
+    mkdir /data/vendor/video 0777 audio audio
+    write /data/vendor/video/videohalPid 0
+    chown audio audio /data/vendor/video/videohalPid
+    chmod 0777 /data/vendor/video/videohalPid
+    write /data/vendor/video/vppservicePid 0
+    chown audio audio /data/vendor/video/vppservicePid
+    chmod 0777 /data/vendor/video/vppservicePid
+
+    # Radio
+    mkdir /data/vendor/radio/apkmbnconfig 0777 radio radio
+    mkdir /data/vendor/radio/sha256 0777 radio radio
+    mkdir /data/vendor/radio/efs 0777 radio radio
+
+    # Qrtr-lookup
+    mkdir /data/vendor/qrtr 0775 system system
+
+    # Add wlan log output path
+    mkdir /data/vendor/wlan_logs 0777 root shell
+    mkdir /data/vendor/mac_addr 0770 system wifi
+    mkdir /mnt/vendor/persist/wlan 0770 system wifi
+
+    # IR
+    chmod 0660 /dev/ir_spi
+    chown system system /dev/ir_spi
+
+    # Add torch node for cit && mmi
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:torch_2/brightness
+    chown system system /sys/class/leds/led:torch_3/brightness
+    chown system system /sys/class/leds/led:flash_0/brightness
+    chown system system /sys/class/leds/led:flash_1/brightness
+    chown system system /sys/class/leds/led:flash_2/brightness
+    chown system system /sys/class/leds/led:flash_3/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:switch_1/brightness
+    chown system system /sys/class/leds/led:switch_2/brightness
+    chown system system /sys/class/leds/led:switch_3/brightness
+    chown system system /sys/class/leds/led:switch_0/trigger
+    chown system system /sys/class/leds/led:switch_1/trigger
+    chown system system /sys/class/leds/led:switch_2/trigger
+    chown system system /sys/class/leds/led:switch_3/trigger
+    chown system system /sys/class/leds/flashlight/brightness
+
+    chmod 0664 /sys/class/leds/led:torch_0/brightness
+    chmod 0664 /sys/class/leds/led:torch_1/brightness
+    chmod 0664 /sys/class/leds/led:torch_2/brightness
+    chmod 0664 /sys/class/leds/led:torch_3/brightness
+    chmod 0664 /sys/class/leds/led:flash_0/brightness
+    chmod 0664 /sys/class/leds/led:flash_1/brightness
+    chmod 0664 /sys/class/leds/led:flash_2/brightness
+    chmod 0664 /sys/class/leds/led:flash_3/brightness
+    chmod 0664 /sys/class/leds/led:switch_0/brightness
+    chmod 0664 /sys/class/leds/led:switch_1/brightness
+    chmod 0664 /sys/class/leds/led:switch_2/brightness
+    chmod 0664 /sys/class/leds/led:switch_3/brightness
+    chmod 0664 /sys/class/leds/led:switch_0/trigger
+    chmod 0664 /sys/class/leds/led:switch_1/trigger
+    chmod 0664 /sys/class/leds/led:switch_2/trigger
+    chmod 0664 /sys/class/leds/led:switch_3/trigger
+    chmod 0664 /sys/class/leds/flashlight/brightness
+    
+    # QCC mode configuration
+    setprop vendor.qti.qcc.oper.mode 4 
+
+    # Enable WLAN SSR recovery
+on property:persist.vendor.ssr.restart_level=ALL_ENABLE
+    write /sys/kernel/cnss/recovery 3
+
+    # Disable WLAN SSR recovery
+on property:persist.vendor.ssr.restart_level=ALL_DISABLE
+    write /sys/kernel/cnss/recovery 0
+
+on property:vendor.post_boot.parsed=1
+    # Setup runtime cpus
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-6
+
+    # IRQ Tuning
+    # IRQ 70: msm_drm0
+    # IRQ 222: kgsl_3d0_irq
+    write /proc/irq/70/smp_affinity_list 2
+    write /proc/irq/222/smp_affinity_list 1
+
+    # Configure uclamp
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/system-background/cpu.uclamp.max 50
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
+    # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
+    write /dev/cpuctl/background/cpu.shares 1024
+    write /dev/cpuctl/system-background/cpu.shares 1024
+    write /dev/cpuctl/dex2oat/cpu.shares 512
+    write /dev/cpuctl/system/cpu.shares 20480
+    # We only have system and background groups holding tasks and the groups below are empty
+    write /dev/cpuctl/camera-daemon/cpu.shares 20480
+    write /dev/cpuctl/foreground/cpu.shares 20480
+    write /dev/cpuctl/nnapi-hal/cpu.shares 20480
+    write /dev/cpuctl/rt/cpu.shares 20480
+    write /dev/cpuctl/top-app/cpu.shares 20480
+
+    # CPUSets
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
+
+    # Disable multiple kswapd threads
+    write /proc/sys/vm/kswapd_threads 1
+
+    # Disable vblank IRQ immediately after turning off
+    write /sys/module/drm/parameters/vblankoffdelay -1
+
+on property:sys.boot_completed=1
+    write /dev/kmsg "start qrtr-lookup after Boot completed "
+    start qrtr-lookup
+
+    # Migrate tasks again in case kernel threads are created during boot
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
+
+    # Thermal
+    chmod 0664 /sys/class/thermal/thermal_message/torch_real_level
+    chown cameraserver cameraserver /sys/class/thermal/thermal_message/torch_real_level
+    chmod 0664 /sys/class/thermal/thermal_message/flash_state
+    chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
+    chmod 0664 /sys/class/thermal/power_save/powersave_mode
+    chown system system /sys/class/thermal/power_save/powersave_mode
+    chmod 0664 /sys/class/thermal/power_save/power_level
+    chown system system /sys/class/thermal/power_save/power_level
+    restart thermal-engine
+
+    # For online boot cpu
+    wait /sys/class/thermal/thermal_message/boot_complete
+    write /sys/class/thermal/thermal_message/boot_complete 2
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+    # Uclamp tunings
+    setprop kernel.sched_util_clamp_min_rt_default 500
+    # Top-app
+    write /dev/cpuctl/top-app/cpu.uclamp.max max
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
+    # Foreground
+    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/foreground/cpu.uclamp.min 20
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
+    # Background
+    write /dev/cpuctl/background/cpu.uclamp.max max
+    write /dev/cpuctl/background/cpu.uclamp.min 20
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+    # System-background
+    write /dev/cpuctl/system-background/cpu.uclamp.max 40
+    write /dev/cpuctl/system-background/cpu.uclamp.min 0
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
+    # Nnapi-hal
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.max max
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 75
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 1
+    # Camera-daemon
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 50
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
+
+service qrtr-lookup /vendor/bin/qrtr-lookup
+    class core
+    user system
+    group system
+    disabled
+    oneshot
+
+service vendor.nv_mac /vendor/bin/nv_mac
+    class late_start
+    user system
+    group system inet net_admin wifi net_raw
+    oneshot
+
+service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
+    override
+    class hal
+    user audioserver
+    # Media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct wakelock context_hub system
+    capabilities BLOCK_SUSPEND SYS_NICE
+    # Setting RLIMIT_RTPRIO allows binder RT priority inheritance
+    rlimit rtprio 10 10
+    ioprio rt 4
+    task_profiles ProcessCapacityHigh HighPerformance
+    socket audio_holder_socket_0 seqpacket 0666 system system
+    socket audio_us_socket_0 seqpacket 0666 system system
+    onrestart restart audioserver
+
+service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-service.xiaomi-multihal
+    override
+    class hal
+    user system
+    group system wakelock context_hub input uhid
+    task_profiles ServiceCapacityLow
+    socket audio_us_socket_1 seqpacket 0666 system system
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
+
+service vendor.qti.hardware.display.composer /vendor/bin/hw/vendor.qti.hardware.display.composer-service
+    override
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    socket pps stream 0660 system system
+    task_profiles ProcessCapacityHigh HighPerformance
+
+service vendor.qti.hardware.display.allocator /vendor/bin/hw/vendor.qti.hardware.display.allocator-service
+    override
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles ProcessCapacityHigh HighPerformance
+
+service thermal-engine /vendor/bin/thermal-engine-v2
+    class main
+    user root
+    group root
+    socket thermal-send-client stream 0660 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0660 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907

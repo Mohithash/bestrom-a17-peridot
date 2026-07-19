@@ -1,0 +1,7 @@
+// BestROM: stub libvmmem when QTI headers missing; libcdsprpc prebuilt NEEDED may still work at runtime
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+// Prefer real vendor/qcom/opensource/libvmmem if it builds; this stub uses same name only if we disable real one.
+// We keep real module path and instead strip hard soong deps from prebuilts.
