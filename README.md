@@ -1,9 +1,11 @@
 # BestROM A17 · peridot (POCO F6) — WIP
 
-**Status:** Source tree builds an OTA (`bestrom_peridot-ota.zip`) and full partition images.  
-**Boot to UI:** not confirmed as stable. VoltageOS 5.11 EOL was used as a known-good recovery ROM with the same flash method.
+**Status (2026-07-19):** Builds a full A17 OTA + images. **Boot to Android UI not confirmed.**  
+VoltageOS 5.11 EOL boots with the same image-flash method and was used for recovery.
 
-This repository is for **continuing bring-up from source** on a new machine/server: device tree, BestROM stubs, notes, and flash scripts. It is **not** a full AOSP mirror.
+**Progress report:** [docs/PROGRESS.md](docs/PROGRESS.md)
+
+This repository is for **continuing bring-up from source**: device tree, BestROM stubs, notes, and flash scripts. It is **not** a full AOSP mirror and **not** a finished daily-driver ROM.
 
 ## What is in this repo
 
@@ -15,11 +17,21 @@ This repository is for **continuing bring-up from source** on a new machine/serv
 | `scripts/` | Local fastboot/payload flash helpers (**no server secrets**) |
 | `autofix_log.json` | Chronological log of build fixes applied during bring-up |
 
+## Downloads (OTA)
+
+| Host | Link |
+|------|------|
+| **GitHub Releases** | [v0.1-wip — `bestrom_peridot-ota.zip`](https://github.com/Mohithash/bestrom-a17-peridot/releases/tag/v0.1-wip) |
+| **SourceForge** | *(optional mirror — see `docs/SOURCEFORGE.md` to publish)* |
+
+Flash with [`scripts/flash_from_ota.ps1`](scripts/flash_from_ota.ps1) / [`docs/FLASH.md`](docs/FLASH.md).  
+**WIP:** not a confirmed daily driver.
+
 ## What is **not** in this repo
 
 - Full AOSP / BestROM source tree (sync with your own manifest)
 - `out/` build intermediates
-- Multi‑GB OTA/images (attach as **GitHub Release** or external link)
+- Multi‑GB OTA/images live in **Releases** / SourceForge (not git history)
 - Xiaomi proprietary blobs (obtain via extract / your vendor dump)
 - SSH passwords or server credentials
 
