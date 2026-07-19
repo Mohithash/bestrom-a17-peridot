@@ -21,8 +21,11 @@ This repository is for **continuing bring-up from source**: device tree, BestROM
 
 | Host | Link |
 |------|------|
-| **GitHub Releases** | [v0.1-wip — `bestrom_peridot-ota.zip`](https://github.com/Mohithash/bestrom-a17-peridot/releases/tag/v0.1-wip) |
-| **SourceForge** | *(optional mirror — see `docs/SOURCEFORGE.md` to publish)* |
+| **SourceForge (primary)** | [bestrom_peridot-ota.zip](https://sourceforge.net/projects/bestrom/files/peridot/bestrom_peridot-ota.zip/download) |
+| **SourceForge folder** | [files/peridot/](https://sourceforge.net/projects/bestrom/files/peridot/) |
+| **GitHub Releases** | [v0.1-wip](https://github.com/Mohithash/bestrom-a17-peridot/releases/tag/v0.1-wip) |
+
+Landing / project: [sourceforge.net/projects/bestrom](https://sourceforge.net/projects/bestrom/)
 
 Flash with [`scripts/flash_from_ota.ps1`](scripts/flash_from_ota.ps1) / [`docs/FLASH.md`](docs/FLASH.md).  
 **WIP:** not a confirmed daily driver.

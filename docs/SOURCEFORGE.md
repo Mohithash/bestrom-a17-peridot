@@ -1,6 +1,12 @@
-# SourceForge mirror (optional)
+# SourceForge (BestROM project)
 
-GitHub Releases are the primary OTA host for this project. SourceForge is useful as a **public mirror** (bandwidth, discovery).
+**Project:** [bestrom](https://sourceforge.net/projects/bestrom/)  
+**Peridot folder:** https://sourceforge.net/projects/bestrom/files/peridot/  
+
+**WIP A17 OTA (uploaded 2026-07-19):**  
+https://sourceforge.net/projects/bestrom/files/peridot/bestrom_peridot-ota.zip/download  
+
+Also present on SF: Voltage unofficial zip, `index.html` landing assets under `peridot/`.
 
 ## One-time setup
 
